@@ -114,7 +114,7 @@ export class LineBot extends EventEmitter2 {
 
     this.express.use((err: Error, req: Request, res: Response, next: NextFunction) => {
       console.error(err);
-      res.status(400).send({ error: err.message });
+      res.status(201).send({ error: err.message });
       next();
     });
   }
